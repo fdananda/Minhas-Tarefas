@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdicionarFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imageAdicionar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_icone_adicionar_add_24" />
+
+            <View
+                android:id="@+id/divider30"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/titutloAdicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Incluir"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageVoltarAdicionar"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/botaoadicionar"
+                android:contentDescription="Botão voltar"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_arrow_back_orange_24dp" />
+
+            <View
+                android:id="@+id/divider23"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider19"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextAdicionarTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Texto da Tarefa a ser adicionada"
+                android:hint="Tarefa (Ex.: Dar banho no cachorro)"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroupTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:paddingLeft="5dp"
+            android:paddingTop="8dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonDiarias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:contentDescription="Radiobutton Diárias"
+                android:padding="8dp"
+                android:text="Diárias"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonEventuais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Radiobutton Eventuais"
+                android:padding="8dp"
+                android:text="Eventuais"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonCadastrarTarefa"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/botaoadicionar"
+            android:contentDescription="Botão Adicionar Tarefa"
+            android:gravity="center"
+            android:minHeight="35dip"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Adicionar Tarefa"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Desenvolvido por @fdananda"
+                android:textAlignment="center"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

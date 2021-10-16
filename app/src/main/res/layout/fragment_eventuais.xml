@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventuaisFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageEventuais"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_icone_eventuais_gray_24" />
+
+                    <View
+                        android:id="@+id/divider30"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/titutloTarefasEventuais"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="4dp"
+                        android:text="Tarefas Eventuais"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/divider20"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/imageViewIniciarEventuais"
+                        android:layout_width="35dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/botaoadicionar"
+                        android:contentDescription="Botão limpar"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/ic_delete_sweep_black_24dp" />
+
+                    <View
+                        android:id="@+id/divider223"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
+
+                    <View
+                        android:id="@+id/divider21"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/imageEditarEventuais"
+                        android:layout_width="35dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/botaoadicionar"
+                        android:contentDescription="Botão Editar"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/ic_create_black_24dp" />
+
+                    <View
+                        android:id="@+id/divider22"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
+
+                    <View
+                        android:id="@+id/divider222"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <ImageView
+                        android:id="@+id/imageExcluirEventuais"
+                        android:layout_width="35dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/botaoadicionar"
+                        android:contentDescription="Botão Excluir"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/ic_clear_black_24dp" />
+
+                    <View
+                        android:id="@+id/divider23"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider19"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/textViewtextoVazio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Você não possui nenhuma tarefa eventual!
+                    Cadastre uma tarefa no botão INCLUIR acima."
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTarefasEventuais"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEventuais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:contentDescription="Botão Incluir"
+        android:src="@drawable/ic_botao_incluir_branco"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal" />
+</FrameLayout>

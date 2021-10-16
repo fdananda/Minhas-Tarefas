@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/verTodasMenu"
+        android:title="VER TODAS"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/verRealizadasMenu"
+        android:title="Realizadas"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/verARelizarMenu"
+        android:title="A realizar"
+        app:showAsAction="never"/>
+</menu>
